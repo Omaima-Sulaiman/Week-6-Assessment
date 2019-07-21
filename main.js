@@ -38,10 +38,22 @@ Ex: addKeyPowerIndex(arrOfObj2)
 ]   
 */
 
-function addKeyPowerIndex() {
-  // WRITE YOUR CODE UNDER THIS LINE  
+function addKeyPowerIndex(array) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+   var obj={}
+   var result= array.forEach(function(element ,i ) {
+     return obj[i] = i*i+element
+     
+     
 
-}
+     
+   });
+return result
+  }
+ 
+
+
+
 
 
 
@@ -57,18 +69,18 @@ and return a new array after will decrease this number
 from each element in this array
 
 var arrOfNum1 = [77,5,33]
-Ex: decreseBy(arrOfnum1,10)
+Ex: decreseBy(arrOfNum1,10)
 => [67,-5,23]
 
 Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
 
-function decreseBy() {
-  // WRITE YOUR CODE UNDER THIS LINE 
-
+function decreseBy(array, num) {
+  // WRITE YOUR CODE UNDER THIS LINE
+var output =array.map(elemnt=>elemnt-num)
+return output
 }
-
 
 
 
@@ -102,9 +114,17 @@ Ex: nameLongerThan(arrOfObj4,6)
 ]
 */
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameLongerThan(array , num) {
+  // WRITE YOUR CODE UNDER THIS LINE  
+  var output =array.filter(elemnt=>elemnt[key].length > num)
+  element =output;
+  
+
+  
+  return output 
 }
+   
+
 
 
 
@@ -133,9 +153,18 @@ Ex: avgLength(arrOfObj4,"food")
 => 6.8
 */
 
-function avgLength() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function avgLength(array , key) {
+  // WRITE YOUR CODE UNDER THIS LINE  
+  var output =array.reduce(function(tot,elem,i){  
+  if(key ===array.elem){
+    tot+=array[elem].length
+  }
+  return tot
+  
 
+       
+ },0)
+  return output
 }
 
 // Good luck :)
